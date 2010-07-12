@@ -237,8 +237,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Make a new prompt box
-
-
     function newPromptBox()
     {
       column = 0;
@@ -336,8 +334,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Rotate through the command history
-
-
     function rotateHistory(n)
     {
       if (history.length == 0) return;
@@ -395,8 +391,6 @@
     };
 
     // Delete the character at the current position
-
-
     function deleteCharAtPos()
     {
       if (column < promptText.length)
@@ -451,8 +445,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Validate command and trigger it if valid, or show a validation error
-
-
     function commandTrigger()
     {
       var line = promptText;
@@ -478,8 +470,6 @@
     };
 
     // Scroll to the bottom of the view
-
-
     function scrollToBottom()
     {
       inner.attr(
@@ -498,8 +488,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Handle a command
-
-
     function handleCommand()
     {
       if (typeof config.commandHandle == 'function')
@@ -535,16 +523,12 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Disable input
-
-
     function disableInput()
     {
       acceptInput = false;
     };
 
     // Enable input
-
-
     function enableInput()
     {
       acceptInput = true;
@@ -552,8 +536,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Reset the prompt in invalid command
-
-
     function commandResult(msg, className)
     {
       column = -1;
@@ -575,8 +557,6 @@
 
     ////////////////////////////////////////////////////////////////////////
     // Display a message
-
-
     function message(msg, className)
     {
       var mesg = $('<div class="jquery-console-message"></div>');
@@ -603,8 +583,6 @@
     ////////////////////////////////////////////////////////////////////////
     // Move to another column relative to this one
     // Negative means go back, positive means go forward.
-
-
     function moveColumn(n)
     {
       if (column + n >= 0 && column + n <= promptText.length)
@@ -732,8 +710,6 @@
     // Simply replace '<', '>' and '&'
     // TODO: Use jQuery's .html() trick, or grab a proper, fast
     // HTML encoder.
-
-
     function htmlEncode(text)
     {
       return (
