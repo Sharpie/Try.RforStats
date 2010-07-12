@@ -14,7 +14,7 @@
       </style>
     %script{:src => "js/lib.min.js", :type => "text/javascript"}
     %script{:src => "js/jquery.console.js", :type => "text/javascript"}
-    %script{:src => "js/tryhaskell.js", :type => "text/javascript"}
+    %script{:src => "js/rforstats.js", :type => "text/javascript"}
     %script{:src => "js/raphael-min.js", :type => "text/javascript"}
   %body
     .page-wrap
@@ -34,85 +34,4 @@
               .console-wrapper-borders.bgs
                 .console
               .console-wrapper-bottom.sprites
-            .guide-wrapper{:style => "margin-bottom:10px"}
-              .guide-wrapper-top.sprites
-              .guide-wrapper-borders.bgs
-                #raphael
-              .guide-wrapper-bottom.sprites
-            .guide-wrapper
-              .guide-wrapper-top.sprites
-              .guide-wrapper-borders.bgs
-                .guide
-                  %p
-                    Welcome to your first taste of Haskell! Let's try Haskell right now!
-                  %h3 Beginners
-                  .indent
-                    %p
-                      Type
-                      %code help
-                      to start the
-                      tutorial. Type
-                      %code lessons
-                      to see the
-                      list of lessons.
-                    %p
-                      Or try typing these out and see what happens
-                      = succeed ":" do
-                        %small.note (click to insert)
-                    %ul
-                      %li
-                        %code 23*36
-                      %li
-                        %code reverse "hello"
-                  #learn-more
-                    %h3 Learn More
-                    .indent
-                      %p.clearfix
-                        %a.tryhaskellcover.sprites{:href => "http://book.realworldhaskell.org/", :title => "Real World Haskell"}
-                          %span Real World Haskell!
-                        Get stuck into a book with
-                        %a{:href => "http://book.realworldhaskell.org/"}
-                          Real
-                          World Haskell
-                        = succeed "," do
-                          %small.note
-                            (readable online!)
-                        published by O'Reilly Media.
-                        Check out
-                        %a{:href => "http://haskell.org/", :title => "Haskell home page"} Haskell.org
-                        for more information about Haskell.
-                        For more fun, use
-                        %a{:href => "http://codepad.org/"} codepad.org
-                        to run full Haskell programs.
-              .guide-wrapper-bottom.sprites
             .main-wrapper-bottom.sprites
-          .footer-wrapper.bgs2.clearfix
-            .footer-wrapper-top.sprites
-            .footer-wrapper-borders.bgs
-              .footer
-                %p
-                  %a{:href => "http://chrisdone.com/posts/2010-04-05-haskell-json-service-tryhaskell.html"}
-                    Evaluation
-                    service
-                  and
-                  %a{:href => "http://github.com/chrisdone/tryhaskell"}
-                    Try
-                    Haskell
-                  by
-                  %a{:href => "http://chrisdone.com/"}
-                    Chris Done,
-                  concept and interface blatantly copied from
-                  = succeed "," do
-                    %a{:href => "http://tryruby.org/", :title => "_why's Try Ruby"}
-                      _why's Try Ruby!
-                  Haskell evaluator powered by a patched version of
-                  = succeed "," do
-                    %a{:href => "http://hackage.haskell.org/package/mueval", :title => "mueval on Hackage"}
-                      Gwern Branwen's mueval
-                  %a{:href => "http://github.com/chrisdone/jquery-console"}
-                    console
-                    library
-                  proudly written in
-                  %a{:href => "http://jquery.com/"}
-                    JQuery.
-            .footer-wrapper-bottom.sprites
