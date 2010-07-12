@@ -1,10 +1,15 @@
 #!/usr/bin/env ruby
 
 require 'rubygems'
+
 require 'sinatra'
+require 'sinatra/static_assets'
+
 require 'haml'
 require 'sass'
 require 'compass'
+
+set:public, File.dirname(__FILE__) + '/static'
 
 configure do
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config.rb'))
@@ -18,5 +23,5 @@ end
 
 
 get '/' do
-  redirect '/index.html'
+  haml :index
 end
