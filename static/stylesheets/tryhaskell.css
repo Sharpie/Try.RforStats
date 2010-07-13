@@ -1,0 +1,434 @@
+/* Try Haskell design by Chris Done */
+/* Mon Feb 22 22:39:10 GMT 2010 */
+/* line 4, ../../views/stylesheets/tryhaskell.scss */
+body {
+  font-family: "DejaVu Sans",sans-serif;
+}
+
+/* line 7, ../../views/stylesheets/tryhaskell.scss */
+a {
+  text-decoration: none;
+  color: #382567;
+}
+
+/* line 11, ../../views/stylesheets/tryhaskell.scss */
+.sprites {
+  background: url(../images/sprites.gif);
+}
+
+/* line 14, ../../views/stylesheets/tryhaskell.scss */
+.bgs {
+  background: url(../images/bgs.gif);
+}
+
+/* line 17, ../../views/stylesheets/tryhaskell.scss */
+.bgs2 {
+  background: url(../images/bgs2.png);
+}
+
+/* line 21, ../../views/stylesheets/tryhaskell.scss */
+div.page-wrap {
+  width: 800px;
+  margin: 10px auto;
+}
+/* line 24, ../../views/stylesheets/tryhaskell.scss */
+div.primary-content {
+  width: 600px;
+  margin-left: 100px;
+  float: left;
+}
+/* line 29, ../../views/stylesheets/tryhaskell.scss */
+div.main-wrapper-top {
+  height: 5px;
+  background-position: 0px -74px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+/* line 34, ../../views/stylesheets/tryhaskell.scss */
+div.main-wrapper-bottom {
+  height: 4px;
+  background-position: 0px -80px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+/* line 39, ../../views/stylesheets/tryhaskell.scss */
+div.main-wrapper-borders {
+  background-position: -1731px 0;
+  padding: 15px;
+  background-repeat: repeat-y;
+}
+/* line 43, ../../views/stylesheets/tryhaskell.scss */
+div.console-wrapper {
+  margin: 0px auto 10px auto;
+  width: 566px;
+  cursor: text;
+  font-family: monospace;
+}
+/* line 48, ../../views/stylesheets/tryhaskell.scss */
+div.console-wrapper-top {
+  height: 3px;
+  background-position: -50px -48px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+/* line 53, ../../views/stylesheets/tryhaskell.scss */
+div.console-wrapper-bottom {
+  height: 3px;
+  background-position: -50px -51px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+/* line 58, ../../views/stylesheets/tryhaskell.scss */
+div.console-wrapper-borders {
+  background-position: 0px 0px;
+  padding: 15px;
+  background-repeat: repeat-y;
+}
+/* line 62, ../../views/stylesheets/tryhaskell.scss */
+div.guide-wrapper {
+  color: #fff;
+  width: 566px;
+  margin-left: 2px;
+}
+/* line 66, ../../views/stylesheets/tryhaskell.scss */
+div.guide-wrapper-top {
+  height: 4px;
+  background-position: 0 -65px;
+  font-size: 0;
+}
+/* line 70, ../../views/stylesheets/tryhaskell.scss */
+div.guide-wrapper-bottom {
+  height: 4px;
+  background-position: 0 -70px;
+  font-size: 0;
+}
+/* line 74, ../../views/stylesheets/tryhaskell.scss */
+div.guide-wrapper-borders {
+  background-position: -1166px 0px;
+  padding: 15px;
+  background-repeat: repeat-y;
+}
+/* line 78, ../../views/stylesheets/tryhaskell.scss */
+div.footer-wrapper {
+  background-position: 0px -2350px;
+  margin: 10px auto;
+  width: 600px;
+  font-family: "DejaVu Sans",sans-serif;
+  margin-bottom: 20px;
+}
+/* line 84, ../../views/stylesheets/tryhaskell.scss */
+div.footer-wrapper a:hover {
+  text-decoration: underline;
+}
+/* line 86, ../../views/stylesheets/tryhaskell.scss */
+div.footer-wrapper-top {
+  height: 5px;
+  background-position: -50px -54px;
+  font-size: 0;
+}
+/* line 90, ../../views/stylesheets/tryhaskell.scss */
+div.footer-wrapper-bottom {
+  height: 5px;
+  background-position: -50px -59px;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+/* line 95, ../../views/stylesheets/tryhaskell.scss */
+div.footer-wrapper-borders {
+  background-position: -566px 0px;
+  padding: 10px;
+  background-repeat: repeat-y;
+  font-size: 12px;
+}
+
+/* line 101, ../../views/stylesheets/tryhaskell.scss */
+h1.main-header {
+  text-indent: -9999px;
+  background-position: -49px 0px;
+  background-repeat: no-repeat;
+  width: 318px;
+  height: 48px;
+  margin-bottom: 20px;
+  float: left;
+}
+
+/* line 111, ../../views/stylesheets/tryhaskell.scss */
+div.console {
+  height: 150px;
+  cursor: text;
+}
+/* line 114, ../../views/stylesheets/tryhaskell.scss */
+div.footer {
+  line-height: 1.3em;
+}
+/* line 116, ../../views/stylesheets/tryhaskell.scss */
+div.console {
+  background: #fff;
+  font-size: 14px;
+  position: relative;
+}
+/* line 121, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-inner {
+  height: 150px;
+  overflow: auto;
+  background: white;
+}
+/* line 125, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-prompt-box {
+  color: #437375;
+  font-family: monospace;
+  margin-top: 0.5em;
+}
+/* line 129, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-prompt-box .prompt-done {
+  cursor: pointer;
+}
+/* line 131, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-prompt-box .prompt-done:hover {
+  background: #453D5B;
+  color: white;
+}
+/* line 134, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-focus span.jquery-console-cursor {
+  background: #666;
+  color: #fff;
+}
+/* line 137, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-message-error {
+  color: #ef0505;
+  font-family: sans-serif;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-top: 0.25em;
+}
+/* line 143, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-message-value {
+  color: #000;
+  font-family: monospace;
+  padding-left: 1em;
+  padding-top: 0.25em;
+  font-weight: bold;
+}
+/* line 149, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-message-type {
+  color: #382567;
+  font-family: monospace;
+  padding-left: 1em;
+  padding-top: 0.25em;
+  font-size: .9em;
+}
+/* line 155, ../../views/stylesheets/tryhaskell.scss */
+div.console span.jquery-console-prompt-label {
+  font-weight: bold;
+}
+/* line 157, ../../views/stylesheets/tryhaskell.scss */
+div.console div.jquery-console-welcome {
+  font-family: "DejaVu Sans",sans-serif;
+}
+/* line 159, ../../views/stylesheets/tryhaskell.scss */
+div.guide {
+  background: #453d5b;
+  font-size: 14px;
+  position: relative;
+}
+/* line 163, ../../views/stylesheets/tryhaskell.scss */
+div.guide h2 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* line 167, ../../views/stylesheets/tryhaskell.scss */
+h3 {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+/* line 173, ../../views/stylesheets/tryhaskell.scss */
+div.guide p {
+  margin-bottom: 0.5em;
+}
+/* line 175, ../../views/stylesheets/tryhaskell.scss */
+div.guide ul {
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+/* line 178, ../../views/stylesheets/tryhaskell.scss */
+div.guide li {
+  line-height: 2em;
+}
+/* line 180, ../../views/stylesheets/tryhaskell.scss */
+div.guide code {
+  color: #8ae0c2;
+  font-family: monospace;
+  background: #2d2542;
+  padding: 0.2em;
+  cursor: default;
+}
+/* line 186, ../../views/stylesheets/tryhaskell.scss */
+div.guide code span.highlight {
+  color: #fff;
+}
+/* line 188, ../../views/stylesheets/tryhaskell.scss */
+div.guide .spoiler {
+  background: #2d2542;
+  color: #2d2542;
+}
+/* line 191, ../../views/stylesheets/tryhaskell.scss */
+div.guide .spoiler:hover {
+  background: #2d2542;
+  color: #8ae0c2;
+}
+/* line 194, ../../views/stylesheets/tryhaskell.scss */
+div.guide code:hover {
+  color: #8ae0c2;
+  background: #2d2542;
+}
+/* line 197, ../../views/stylesheets/tryhaskell.scss */
+div.guide div.indent {
+  margin-left: 10px;
+}
+/* line 199, ../../views/stylesheets/tryhaskell.scss */
+div.guide p {
+  line-height: 1.7em;
+}
+/* line 201, ../../views/stylesheets/tryhaskell.scss */
+div.guide p em {
+  font-style: italic;
+}
+/* line 203, ../../views/stylesheets/tryhaskell.scss */
+div.guide p strong {
+  text-decoration: underline;
+  color: #fff;
+  font-weight: bold;
+}
+/* line 207, ../../views/stylesheets/tryhaskell.scss */
+div.guide ol {
+  margin-left: 50px;
+  list-style-type: decimal;
+  margin-bottom: 5px;
+}
+/* line 211, ../../views/stylesheets/tryhaskell.scss */
+div.guide a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 214, ../../views/stylesheets/tryhaskell.scss */
+div.guide img.book-thumb {
+  float: right;
+  padding: 0px 3px;
+}
+/* line 217, ../../views/stylesheets/tryhaskell.scss */
+div.guide small.note {
+  color: #ed9fda;
+  font-size: 0.9em;
+}
+/* line 221, ../../views/stylesheets/tryhaskell.scss */
+div.guide div.note {
+  font-size: 0.8em;
+  color: #ac739e;
+  margin-top: 2em;
+}
+/* line 225, ../../views/stylesheets/tryhaskell.scss */
+div.guide div.note code {
+  color: #6eb29a;
+}
+/* line 227, ../../views/stylesheets/tryhaskell.scss */
+div.guide div.lesson {
+  color: #ed9fda;
+  font-size: 0.8em;
+  display: block;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+/* line 234, ../../views/stylesheets/tryhaskell.scss */
+div.share-wrapper {
+  font-size: 12px;
+  padding: 10px 0em 0em 10px;
+}
+/* line 237, ../../views/stylesheets/tryhaskell.scss */
+div.share-wrapper strong {
+  font-weight: bold;
+}
+
+/* line 240, ../../views/stylesheets/tryhaskell.scss */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 247, ../../views/stylesheets/tryhaskell.scss */
+div.menu {
+  float: right;
+  margin-right: 2px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+/* line 253, ../../views/stylesheets/tryhaskell.scss */
+a.reset-btn {
+  float: left;
+  display: block;
+  width: 59px;
+  height: 24px;
+  background-position: -427px -18px;
+  background-repeat: no-repeat;
+}
+/* line 260, ../../views/stylesheets/tryhaskell.scss */
+a.reset-btn span {
+  display: none;
+}
+
+/* line 263, ../../views/stylesheets/tryhaskell.scss */
+div.clear {
+  clear: both;
+}
+
+/* line 266, ../../views/stylesheets/tryhaskell.scss */
+a.tryhaskellcover {
+  width: 50px;
+  height: 66px;
+  display: block;
+  float: right;
+  background-position: 0px 0px no-repeat;
+}
+/* line 272, ../../views/stylesheets/tryhaskell.scss */
+a.tryhaskellcover span {
+  display: none;
+}
+
+/* line 275, ../../views/stylesheets/tryhaskell.scss */
+div.console-wrapper .notice {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  background: #eee;
+  color: black;
+  padding: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* line 287, ../../views/stylesheets/tryhaskell.scss */
+p.ajax-loader {
+  background: url(../images/ajax-loader.gif);
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+}
+
+/* line 294, ../../views/stylesheets/tryhaskell.scss */
+.notice a {
+  padding: 3px;
+  background: #333;
+  color: white;
+}
+/* line 298, ../../views/stylesheets/tryhaskell.scss */
+.notice .action {
+  text-align: right;
+}
