@@ -159,6 +159,7 @@
       extern.inner = inner;
       extern.typer = typer;
       extern.scrollToBottom = scrollToBottom;
+      extern.writeToConsole = commandResult;
     })();
 
     ////////////////////////////////////////////////////////////////////////

@@ -18,9 +18,14 @@ var rConsole, rServe;
 			this._ws.onclose=this._onclose;
 		},
 		
-		evalCommand: function( command, callback ){
-		  this._consoleCallback = callback;
+		evalCommand: function( command ){
 		  this._ws.send( command );
+		},
+		
+		bindToConsole: function( console ){
+		
+		  this.writeToConsole = console.writeToConsole;
+		
 		},
 	
 		_onopen: function(){
@@ -28,9 +33,9 @@ var rConsole, rServe;
 	
 		_onmessage: function(m) {
 			if (m.data){
-				this.controller._consoleCallback(m.data);
+				this.controller.writeToConsole(m.data);
       }else{
-        this.controller._consoleCallback('');
+        this.controller.writeToConsole('');
       }
 		},
 			
@@ -55,7 +60,6 @@ var rConsole, rServe;
       historyPreserveColumn: true,
       welcomeMessage: 'Welcome to RWebConsole 0.0a running R 2.11.1\n Many things are currently broken, not limited to:\n help/?, plotting, edit()\nIf the console is unresponsive, you probably broke something. Try reloding.',
       
-      
       // Callbacks
       commandValidate: function(line){
 	      if (line == "" || line == null) return false; // Empty line is invalid
@@ -63,10 +67,11 @@ var rConsole, rServe;
       },
       
       commandHandle: function(line,report){
-        rServe.evalCommand( line, report );
+        rServe.evalCommand( line );
       }
     });
     
+    rServe.bindToConsole( rConsole );
     
   });
 })(jQuery);   // End jQuery wrapper.
