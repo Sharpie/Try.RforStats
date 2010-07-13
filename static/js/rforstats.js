@@ -11,7 +11,7 @@ var rConsole, rServe;
 	  */
 	  
 		connect: function(){
-			this._ws=new WebSocket("ws://localhost:8080");
+			this._ws=new WebSocket("ws://fe.sharpsteen.net:8080");
 			this._ws.controller = this;
 			this._ws.onopen=this._onopen;
 			this._ws.onmessage=this._onmessage;
