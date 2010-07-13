@@ -53,7 +53,7 @@ var rConsole, rServe;
       autofocus: true,
       promptHistory: true,
       historyPreserveColumn: true,
-      welcomeMessage: 'Welcome to R.',
+      welcomeMessage: 'Welcome to RWebConsole 0.0a running R 2.11.1\n Many things are currently broken, not limited to:\n help/?, plotting, edit()\nIf the console is unresponsive, you probably broke something. Try reloding.',
       
       
       // Callbacks

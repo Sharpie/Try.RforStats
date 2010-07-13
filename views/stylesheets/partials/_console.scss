@@ -1,0 +1,73 @@
+/* Try Haskell design by Chris Done */
+/* Mon Feb 22 22:39:10 GMT 2010 */
+@import "compass/css3/border-radius";
+
+div {
+  &.console-wrapper {
+    margin: 0px auto 10px auto;
+    padding: 15px;
+    border: 2px solid #e4e4e4;
+    @include border-radius;
+    width: 566px;
+    cursor: text;
+    font-family: monospace; }
+
+div {
+  &.console {
+    height: 150px;
+    cursor: text; }
+  &.console {
+    background: #fff;
+    font-size: 14px;
+    position: relative;
+    div {
+      &.jquery-console-inner {
+        height: 150px;
+        overflow: auto;
+        background: white; }
+      &.jquery-console-prompt-box {
+        color: #437375;
+        font-family: monospace;
+        margin-top: 0.5em;
+        .prompt-done {
+          cursor: pointer;
+          &:hover {
+            background: #453D5B;
+            color: white; } } }
+      &.jquery-console-focus span.jquery-console-cursor {
+        background: #666;
+        color: #fff; }
+      &.jquery-console-message-error {
+        color: #ef0505;
+        font-family: sans-serif;
+        font-weight: bold;
+        padding-left: 1em;
+        padding-top: 0.25em; }
+      &.jquery-console-message-value {
+        color: #000;
+        font-family: monospace;
+        padding-left: 1em;
+        padding-top: 0.25em;
+        font-weight: bold; }
+      &.jquery-console-message-type {
+        color: #382567;
+        font-family: monospace;
+        padding-left: 1em;
+        padding-top: 0.25em;
+        font-size: .9em; } }
+    span.jquery-console-prompt-label {
+      font-weight: bold; }
+    div.jquery-console-welcome {
+      font-family: "DejaVu Sans",sans-serif; } } } }
+
+div.console-wrapper .notice {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  background: #eee;
+  color: black;
+  padding: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: bold; }
