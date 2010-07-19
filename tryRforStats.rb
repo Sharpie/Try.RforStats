@@ -6,8 +6,6 @@ require 'sinatra'
 require 'sinatra/static_assets'
 
 require 'haml'
-require 'sass'
-require 'compass'
 
 set:public, File.dirname(__FILE__) + '/static'
 
